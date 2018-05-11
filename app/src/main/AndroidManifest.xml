@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pprzy.eZdrowie">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="eZdrowie"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.pprzy.eZdrowie.MainActivity"
+            android:label="eZdrowie"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.pprzy.eZdrowie.BasicInputActivity"
+            android:label="@string/title_activity_basic_input"
+            android:parentActivityName="com.example.pprzy.eZdrowie.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pprzy.eZdrowie.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.pprzy.eZdrowie.WeightActivity"
+            android:label="@string/title_activity_weight"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.pprzy.eZdrowie.PulseActivity"
+            android:label="@string/title_activity_pulse"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.pprzy.eZdrowie.SleepActivity"
+            android:label="@string/title_activity_sleep"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.pprzy.eZdrowie.PhysActivity"
+            android:label="@string/title_activity_phys"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.pprzy.eZdrowie.NotesActivity"
+            android:label="@string/title_activity_notes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.pprzy.eZdrowie.NotificationsActivity"
+            android:label="@string/title_activity_notifications"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name="com.example.pprzy.eZdrowie.RepeatingActivity"/>
+        
+        <receiver android:name="com.example.pprzy.eZdrowie.NotificationReciever"/>
+        
+    </application>
+
+</manifest>

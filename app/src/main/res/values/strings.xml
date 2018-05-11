@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">JAPIERDOLE</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="ekran_powitalny">Za chwilę zostaniesz poproszony/a o podanie podstawowych danych o sobie w celu lepszego dopasowania i spersonalizowania dostępnych funkcji. Dzięki tej aplikacji dowiesz się więcej o stanie swojego zdrowia oraz będziesz mógł/a w bardzo prosty sposób monitorować wiele parametrów życiowych. Do dzieła!</string>
+
+    <string name="ekran_powitalny2">Dobrze widzieć Cię ponownie! Wybierz z menu interesującą Cię zakładkę aby dodać lub przejrzeć Twoje dane.</string>
+
+    <string name="daily_data">Wprowadź informacje na temat Twoich dziejszych pomiarów zdrowia, aktywności czy snu. Możesz zrobić to w poniższych polach bądź w jeśli chcesz zmienić lub wprowadzic dane konkretnej kategorii wybierz odpowiednią pozycję z menu.</string>
+
+    <string name="ekran_wagi">W tej zakładce możesz przeglądać dane odnośnie Twojej wagi oraz wprowadzać dzienne pomiary.</string>
+
+    <string name="ekran_puls">W tej zakładce możesz przeglądać dane odnośnie Twojego tętna, ciśnienia oraz wprowadzać dzienne pomiary. Aby dowiedzieć się o prawidłowych wartościach kliknij przycisk poniżej.</string>
+
+    <string name="opis_waga_dzienna">Wprowadź swój dzisiejszy pomiar wagi:</string>
+
+    <string name="opis_waga_dzienna2">Wybierz datę, aby zobaczyć swoją wagę z danego dnia:</string>
+
+    <string name="opis_waga_bmi">Twoje obecne BMI wynosi:</string>
+
+    <string name="opis_puls">Wprowadź pomiar tętna:</string>
+
+    <string name="opis_puls2">Wprowadź pomiar ciśnienia:</string>
+
+    <string name="opis_puls3">Wybierz datę, aby zobaczyć swoje tętno oraz ciśnienie z danego dnia:</string>
+
+    <string name="opis_cisnienie">Jeżeli w większości wykonywanych pomiarów wartość ciśnienia skurczowego wynosi więcej niż 140 mmHg, a wartość ciśnienie rozkurczowego więcej niż 90 mmHg mamy do czynienia z nadciśnieniem tętniczym. Prawidłowe ciśnienie waha się w granicach 120/80.</string>
+
+    <string name="opis_sleep">W tej zakładce zostaniesz poproszony/a o ocenę jakości Twojego snu w prostym kwestionariuszu. Warto monitorować te dane, aby zyskać lepszy obraz na ewentualne pojawiające się problemy ze snem. </string>
+
+    <string name="opis_snu">Tego dnia oceniłeś/aś swój sen następująco:</string>
+
+    <string name="opis_bmi">BMI jest wskaźnikiem masy ciała. BMI poniżej 18,5 oznacza niedowagę, pomiędzy 18,5 a 24,99 wagę prawidłową, a powyżej 25 nadwagę. Jeśli Twój wskaźnik masy ciała znacznie odbiega od wagi prawidłowej warto poszukać przyczyny, przeanalizować swoją dietę, a w przypadku dalszych problemów skonsultować się z dietetykiem bądź lekarzem.</string>
+
+    <string name="opis_Phys">W tej zakładce zostaniesz poproszony/a o subiektywną ocenę swojej dziennej aktywności fizycznej i samopoczucia. Warto monitorować również takie dane, dzięki nim w przyszłości możliwe będzie znalezienia okresu lepszego bądź gorszego samopoczucia i skorelowanie go z innymi danymi, które mogły mieć na to wpływ.</string>
+
+    <string name="opis_Notes">W tej zakładce możesz zapisywać dodatkowe notatki i spostrzeżenia odnośnie swojego zdrowia dla danego dnia. Jak w poprzednich można również oglądać swoje notatki z danego dnia.</string>
+
+    <string name="opis_notifications">W tej zakładce możesz ustawić poranne oraz wieczorne powiadomienie o lekach.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_basic_input">BasicInputActivity</string>
+    <string name="title_activity_weight">WeightActivity</string>
+    <string name="title_activity_pulse">PulseActivity</string>
+    <string name="title_activity_sleep">SleepActivity</string>
+    <string name="title_activity_phys">PhysActivity</string>
+    <string name="title_activity_notes">NotesActivity</string>
+    <string name="title_activity_notifications">NotificationsActivity</string>
+
+</resources>

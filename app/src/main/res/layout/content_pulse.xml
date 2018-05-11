@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/heart_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.pprzy.eZdrowie.PulseActivity"
+    tools:showIn="@layout/app_bar_pulse"
+    android:id="@+id/layout_cisnienie"
+    android:foreground="@drawable/shape_window_dim"
+    >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="matrix"
+        app:srcCompat="@drawable/transparent_background_" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+
+            <TextView
+                android:id="@+id/textView_opis1"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_dane1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/ekran_puls"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView_weight1"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_opis1"
+                android:layout_below="@+id/textView_opis1"
+                android:layout_marginTop="100dp"
+                android:text="@string/opis_puls"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView_waga_kalend"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText_puls"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="43dp"
+                android:text="@string/opis_puls2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView_puls3"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_waga_kalend"
+                android:layout_below="@+id/button_zatwierdz_cisnienie"
+                android:layout_marginTop="70dp"
+                android:text="@string/opis_puls3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView_dane1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Mój puls, tętno"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:text="Mój puls, tętno" />
+
+
+            <EditText
+                android:id="@+id/editText_puls"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/textView_weight1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@color/background_material_light_1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:text="Twoje tętno"
+                android:textAlignment="center"
+                android:textColor="@color/background_material_light_5"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_cisnienie_skurczowe"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/editText_puls"
+                android:layout_below="@+id/textView_waga_kalend"
+                android:layout_marginTop="28dp"
+                android:background="@color/background_material_light_1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:text="ciśn. skurczowe"
+                android:textAlignment="center"
+                android:textColor="@color/background_material_light_5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_editor_absoluteY="500dp" />
+
+            <EditText
+                android:id="@+id/editText_cisnienie_rozkurczowe"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/editText_cisnienie_skurczowe"
+                android:layout_below="@+id/editText_cisnienie_skurczowe"
+                android:layout_marginTop="14dp"
+                android:background="@color/background_material_light_1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:text="ciśn. rozkruczowe"
+                android:textAlignment="center"
+                android:textColor="@color/background_material_light_5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_editor_absoluteY="500dp" />
+
+            <Button
+                android:id="@+id/button_zatwierdz_cisnienie"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText_cisnienie_rozkurczowe"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:text="ZATWIERDŹ"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="178dp"
+                tools:layout_editor_absoluteY="594dp"
+                tools:text="ZATWIERDŹ" />
+
+            <DatePicker
+                android:id="@+id/datePickerPulse"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puls3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="#aaffffff" />
+
+            <TextView
+                android:id="@+id/textView_cisnieniezdnia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_waga_kalend"
+                android:layout_alignTop="@+id/waga_z_dnia"
+                android:layout_below="@id/button_pokaz_dane_puls"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="15dp"
+                android:text="Twoje ciśnienie:"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView_pulszdnia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_cisnieniezdnia"
+                android:layout_alignTop="@+id/pulszdnia"
+                android:text="Twój puls"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/cisnieniezdnia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/editText_cisnienie_rozkurczowe"
+                android:layout_alignTop="@+id/textView_cisnieniezdnia"
+                android:layout_marginEnd="16dp"
+                android:background="#55ffffff"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:text="000"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/slesz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/cisnienie_rozkurcz_zdnia"
+                android:layout_alignBottom="@+id/cisnienie_rozkurcz_zdnia"
+                android:layout_toStartOf="@+id/cisnienie_rozkurcz_zdnia"
+
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:text="/"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cisnienie_rozkurcz_zdnia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/cisnieniezdnia"
+                android:layout_alignBottom="@+id/cisnieniezdnia"
+                android:layout_alignEnd="@+id/textView_puls3"
+                android:background="#55ffffff"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:text="00"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/pulszdnia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/cisnieniezdnia"
+                android:layout_below="@+id/cisnieniezdnia"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="9dp"
+                android:background="#55ffffff"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:text="00"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_wiecej"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView_weight1"
+                android:layout_below="@id/textView_opis1"
+                android:layout_marginTop="10dp"
+                android:background="#469387"
+                android:text="Więcej"
+                android:textStyle="bold"
+                tools:text="Więcej" />
+
+            <Button
+                android:id="@+id/button_pokaz_dane_puls"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/datePickerPulse"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:text="POKAŻ"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="178dp"
+                tools:layout_editor_absoluteY="594dp"
+                tools:text="POKAŻ" />
+
+            <Button
+                android:id="@+id/button_update_puls"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/datePickerPulse"
+                android:text="ZAPISZ"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="178dp"
+                tools:layout_editor_absoluteY="594dp"
+                tools:text="ZAPISZ" />
+
+            <Button
+                android:id="@+id/button_usun_puls"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/datePickerPulse"
+                android:layout_below="@+id/textView_pulszdnia"
+                android:layout_marginTop="50dp"
+                android:text="USUŃ"
+                android:textStyle="bold"
+                tools:text="USUŃ" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

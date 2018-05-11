@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.pprzy.eZdrowie.BasicInputActivity"
+    tools:showIn="@layout/app_bar_basic_input"
+    android:background="@mipmap/heart_background">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="matrix"
+        app:srcCompat="@drawable/transparent_background_" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        >
+
+
+        <TextView
+            android:id="@+id/textView_dane1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Podaj swoje podstawowe dane:"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:text="Podaj swoje podstawowe dane:" />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/textView_dane1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@color/background_material_light_1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:text="imię, nazwisko"
+            android:textAlignment="center"
+            android:textColor="@color/background_material_light_5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/editTextFirstName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:background="@color/background_material_light_1"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:text="wiek"
+            android:textAlignment="center"
+            android:textColor="@color/background_material_light_5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:layout_alignStart="@+id/editTextAge"
+            android:background="@color/background_material_light_1"
+            android:layout_below="@id/editTextAge"
+            android:layout_marginTop="20dp"
+
+            >
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textColor="@color/background_material_light_5"
+                android:textStyle="bold"
+                android:text="M"
+                />
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textColor="@color/background_material_light_5"
+                android:textStyle="bold"
+                android:text="K"
+                />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_alignStart="@+id/radioGroupGender"
+            android:layout_below="@id/radioGroupGender"
+            android:layout_marginTop="20dp"
+            android:background="@color/background_material_light_1"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:text="wzrost"
+            android:textAlignment="center"
+            android:textColor="@color/background_material_light_5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_alignStart="@+id/editTextHeight"
+            android:layout_below="@id/editTextHeight"
+            android:layout_marginTop="20dp"
+            android:background="@color/background_material_light_1"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:text="waga"
+            android:textAlignment="center"
+            android:textColor="@color/background_material_light_5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_confirm_notification1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextWeight"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="ZATWIERDŹ"
+            tools:text="ZATWIERDŹ"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/button_aktualizuj_basic"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_confirm_notification1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="ZAKTUALIZUJ"
+            tools:text="ZAKTUALIZUJ"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

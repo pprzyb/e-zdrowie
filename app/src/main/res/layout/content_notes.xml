@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.pprzy.eZdrowie.NotesActivity"
+    tools:showIn="@layout/app_bar_notes"
+    android:background="@mipmap/heart_background">
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="matrix"
+        app:srcCompat="@drawable/transparent_background_" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+
+
+            <TextView
+                android:id="@+id/textView_opis1"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_notes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/opis_Notes"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Notatki"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:text="Notatki" />
+
+            <TextView
+                android:id="@+id/textView_wprow_not"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_opis1"
+                android:layout_below="@+id/textView_opis1"
+                android:layout_marginTop="50dp"
+                android:text="Wprowadź swoje notatki:"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+
+            <EditText
+                android:id="@+id/editText_notes"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_below="@+id/textView_opis1"
+                android:layout_centerHorizontal="true"
+                android:gravity="top"
+                android:layout_marginTop="83dp"
+                android:background="#55ffffff"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:selectAllOnFocus="false"
+                android:singleLine="false"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button_zatwierdz"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText_notes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:text="ZATWIERDŹ"
+                android:textStyle="bold"
+                tools:text="ZAPISZ" />
+
+
+
+
+            <TextView
+                android:id="@+id/textView_not_z_dnia"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_opis1"
+                android:layout_below="@+id/button_zatwierdz"
+                android:layout_marginTop="80dp"
+                android:text="Wybierz datę, aby zobaczyć swoje zapiski z konkretnego dnia: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+
+
+            <DatePicker
+                android:id="@+id/datePickerNotes"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_not_z_dnia"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="#aaffffff" />
+
+
+            <TextView
+                android:id="@+id/textView_hist_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_show_note"
+                android:layout_alignStart="@+id/textView_wprow_not"
+                android:text="Twoja notatka:"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_notatka_z_dnia"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_below="@+id/textView_hist_notes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="5dp"
+                android:gravity="top"
+                android:background="#55ffffff"
+                android:padding="10dp"
+                android:text=""
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:selectAllOnFocus="false"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button_show_note"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/datePickerNotes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:text="POKAŻ"
+                android:textStyle="bold"
+                tools:text="POKAŻ" />
+
+            <Button
+                android:id="@+id/button_usun_notatke"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/button_edytuj_notatke"
+                android:text="USUŃ"
+                android:layout_below="@id/et_notatka_z_dnia"
+                android:textStyle="bold"
+                tools:text="USUŃ" />
+
+            <Button
+                android:id="@+id/button_edytuj_notatke"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/et_notatka_z_dnia"
+                android:text="ZAPISZ"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                tools:text="ZAPISZ" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
